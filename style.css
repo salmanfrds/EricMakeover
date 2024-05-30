@@ -1,0 +1,75 @@
+*{
+    font-family: 'lora', serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+#navbar {
+    margin: 1rem 0.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbutton a {
+    font-size: 1rem;
+    color: #000000;
+    padding: 1.4rem 1rem;
+    transition: background-color 0.5s ease;
+}
+
+.navbutton a:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+#navbar img {
+    height: 1.8rem;
+    vertical-align: middle;
+    padding: 0px 15px;
+}
+
+#logo {
+    text-align: center;
+    padding: 20px;
+}
+
+#sbar {
+    padding: 10px;
+}
+
+#sbar input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
+
+#sbar input[type="submit"] {
+    padding: 5px 10px;
+}
+
+#sbar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+#Footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#Footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
