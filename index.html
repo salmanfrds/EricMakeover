@@ -10,8 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
+    <!--Logo-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body id="bodyMain" >
     <div id="main" class="index">
@@ -27,47 +31,53 @@
                 <a href="https://eric.ed.gov/?contact">Contact Us</a>
             </div>    
         </nav>
-
         <hr>
-              
-        <div id="logo">
-            <a href="https://eric.ed.gov/?" id="Home" title="ERIC Home">
-                <img src="//eric.ed.gov/ericwidget/images/eric_large_logo.png" id="imgLogo" alt="ERIC - Institute of Education Sciences">
-            </a>
-        </div>
-        <div id="sbar">
-            <form id="f">
-                <div>
-                    <input id="s" type="text" name="q" placeholder="Search education resources" spellcheck="false">
-                    <input type="submit" value="Search">
-                    <a id="atips" href="https://eric.ed.gov/?advanced">Advanced Search Tips</a>
-                    <button id="tab1" class="sTab">Collection</button>
-                    <button id="tab2" class="sTab">Thesaurus</button>
-                </div>
-            </form>
-        </div>
-        <div id="i"></div>
-        <div id="Footer">
-            <div id="ftrPadding">
-                <div id="ftr">
-                    <div id="centerLinks">
-                        <a href="https://eric.ed.gov/?privacy">Privacy</a>
-                        <a href="https://eric.ed.gov/?copyright">Copyright</a>
-                        <a href="https://eric.ed.gov/?contact">Contact Us</a>
-                        <a href="https://eric.ed.gov/?selection">Selection Policy</a>
-                        <a href="https://eric.ed.gov/?api">API</a>
-                        <div>
-                            <a href="https://eric.ed.gov/?journals">Journals</a>
-                            <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
-                            <a href="https://eric.ed.gov/?download">Download</a>
-                            <a href="https://eric.ed.gov/submit">Submit</a>
-                            <a href="https://eric.ed.gov/?multimedia">Multimedia</a>
-                            <a href="https://eric.ed.gov/?widget">Widget</a>
-                        </div>
+        <div id="container">     
+            <div id="logo">
+                <a href="https://eric.ed.gov/?" id="Home" title="ERIC Home">
+                    <img src="//eric.ed.gov/ericwidget/images/eric_large_logo.png" id="imgLogo" alt="ERIC - Institute of Education Sciences">
+                </a>
+            </div>
+            <div id="sbar">
+                <form id="f">
+                    <div id="search">
+                        <input id="s" type="text" name="q" placeholder="Search education resources" spellcheck="false">
+                        <button type="submit" class="search-icon">
+                            <i data-feather="search" style="color: rgb(60, 60, 60);"></i>
+                        </button>                                                       
                     </div>
-                </div>
+                    <div id="buttons">
+                        <button id="tab1" class="sTab">Collection</button>
+                        <button id="tab2" class="sTab">Thesaurus</button>
+                    </div>        
+                </form>
             </div>
         </div>
+        <footer id="Footer">
+            <div id="ftr">
+                <div id="socialIcons">
+                    <a href="https://www.facebook.com/SearchEduResources"><img width="30" height="30" src="icons8-twitterx.svg" alt="Twitter" /></a>
+                    <a href="https://x.com/ERICinfo"><img width="30" height="30" src="icons8-facebook.svg" alt="Facebook" /></a>
+                </div>
+                <div id="centerLinks">
+                    <a href="https://eric.ed.gov/?privacy">Privacy</a>
+                    <a href="https://eric.ed.gov/?copyright">Copyright</a>
+                    <a href="https://eric.ed.gov/?contact">Contact Us</a>
+                    <a href="https://eric.ed.gov/?selection">Selection Policy</a>
+                    <a href="https://eric.ed.gov/?api">API</a>
+                    <br>
+                    <a href="https://eric.ed.gov/?journals">Journals</a>
+                    <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
+                    <a href="https://eric.ed.gov/?download">Download</a>
+                    <a href="https://eric.ed.gov/submit">Submit</a>
+                    <a href="https://eric.ed.gov/?multimedia">Multimedia</a>
+                    <a href="https://eric.ed.gov/?widget">Widget</a>
+                </div>
+            </div>
+        </footer>        
     </div>
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
