@@ -16,8 +16,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
-<body id="bodyMain" >
+<body id="bodyMain">
     <div id="main" class="index">
         <nav id="navbar">
             <div class="navlogo">
@@ -42,7 +45,7 @@
                 <form id="f">
                     <div id="search">
                         <input id="s" type="text" name="q" placeholder="Search education resources" spellcheck="false">
-                        <button type="submit" class="search-icon">
+                        <button id="sbut" type="submit" class="search-icon">
                             <i data-feather="search" style="color: rgb(60, 60, 60);"></i>
                         </button>                                                       
                     </div>
@@ -78,6 +81,14 @@
     </div>
     <script>
         feather.replace();
+
+        document.getElementById('sbut').addEventListener('click', function(event) {
+            event.preventDefault();
+            var query = document.getElementById('s').value; // Get the value of the search input
+            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query); // Construct the search URL
+            window.location.href = searchURL; // Redirect to the search URL
+        });
+        
     </script>
 </body>
 </html>
