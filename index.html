@@ -16,9 +16,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 </head>
 <body id="bodyMain">
     <div id="main" class="index">
@@ -84,11 +81,42 @@
 
         document.getElementById('sbut').addEventListener('click', function(event) {
             event.preventDefault();
-            var query = document.getElementById('s').value; // Get the value of the search input
-            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query); // Construct the search URL
-            window.location.href = searchURL; // Redirect to the search URL
+            var query = document.getElementById('s').value;
+            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
+            window.location.href = 'search.html';
+            // window.location.href = searchURL;
+            // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
         });
-        
+        document.addEventListener("DOMContentLoaded", function() {
+            var tab2Button = document.getElementById("tab2");
+            var tab1Button = document.getElementById("tab1")
+            tab2Button.addEventListener("click", function(event) {
+ 
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Change the button styles
+                tab2Button.style.backgroundColor = "#67BFFF";
+                tab2Button.style.fontWeight = "600";
+
+                tab1Button.style.backgroundColor = "#ccc"
+                tab1Button.style.fontWeight = "400"
+            });
+
+            tab1Button.addEventListener("click", function(event) {
+ 
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Change the button styles
+                tab1Button.style.backgroundColor = "#95CB77";
+                tab1Button.style.fontWeight = "600";
+
+                tab2Button.style.backgroundColor = "#ccc"
+                tab2Button.style.fontWeight = "400"
+            });
+        });
+
     </script>
 </body>
 </html>
