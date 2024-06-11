@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ERIC - Education Resources Information Center</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!--Logo-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="bodyMain">
+    <div id="all" class="index">
+        <nav id="navbar">
+            <div class="navlogo">
+                <a href="index.html">
+                    <img src="eric_logo.png" alt="IES">
+                </a>
+            </div>
+            <div class="navbutton">
+                <a href="https://eric.ed.gov/?note">Notes</a>
+                <a href="https://eric.ed.gov/?faq">FAQ</a>
+                <a href="https://eric.ed.gov/?contact">Contact Us</a>
+            </div>    
+        </nav>
+        <hr>
+        <div class="searchbar" style="margin: 20px auto;">
+            <input id="stab1" type="text" name="q" placeholder="Website" spellcheck="false">
+            <button id="sbutn" type="submit" class="search-icon">
+                <i data-feather="search" style="color: rgb(60, 60, 60);"></i>
+            </button>                                                       
+            <button id="stab2" class="sTab">Collection</button>
+            <button id="stab3" class="sTab">Thesaurus</button>
+        </div>
+        <div id="texts">     
+            <h1>Request for Feedback on Changes to ERIC Selection Policy</h1>
+            <p>ERIC has released a draft revised selection policy, the document that guides the selection of sources and the types of materials cataloged by ERIC. The goal of the update is to ensure the policy is transparent, reflects current practices, and allows for innovation by publishing in new formats with increased metadata. ERIC is seeking feedback from the community on the proposed changes. Stakeholders can access the draft policy and watch a recorded webinar explaining changes.</p>
+            <h2>ERIC proposes four major updates to the policy:</h2>
+            <ul>
+                <li><strong>Enhancements to support compliance with new federal public access policies:</strong> ERIC will start displaying the full text of ED-funded work as website text immediately after an article is first made public. This will enable the public to get the full text over a year sooner than the current policy and in a machine-readable format that will allow for bulk downloading and analysis.</li>
+                <li><strong>A process to periodically re-review all sources:</strong> ERIC will now re-review all new sources 3 years after initial acceptance in ERIC. After this initial re-review, all sources will be re-reviewed every 5 years to ensure the content continues to meet ERIC’s standards.</li>
+                <li><strong>A re-prioritization of international content:</strong> In the past 5 years, ERIC has found more high-quality content that meets ERIC’s standards than ERIC can afford to index. Going forward, we are going to shift our prioritization to focus on the needs of our core stakeholders-- educators, parents, policymakers, researchers, and the public across the United States. This means that we will be rethinking how we prioritize international content.</li>
+                <li><strong>Changes to the types of materials eligible for online submission:</strong> Under the new online submission process, ERIC will no longer accept published journal articles from individuals who are not US federal awardees.</li>
+            </ul>
+            <p>We welcome your feedback! Please submit all questions and comments to <a href="mailto:ERICRequests@ed.gov">ERICRequests@ed.gov</a> by March 11, 2024.</p>
+        </div>
+        <footer id="Footer">
+            <div id="ftr">
+                <div id="socialIcons">
+                    <a href="https://www.facebook.com/SearchEduResources"><img width="30" height="30" src="icons8-twitterx.svg" alt="Twitter" /></a>
+                    <a href="https://x.com/ERICinfo"><img width="30" height="30" src="icons8-facebook.svg" alt="Facebook" /></a>
+                </div>
+                <div id="centerLinks">
+                    <a href="https://eric.ed.gov/?privacy">Privacy</a>
+                    <a href="https://eric.ed.gov/?copyright">Copyright</a>
+                    <a href="https://eric.ed.gov/?contact">Contact Us</a>
+                    <a href="https://eric.ed.gov/?selection">Selection Policy</a>
+                    <a href="https://eric.ed.gov/?api">API</a>
+                    <br>
+                    <a href="https://eric.ed.gov/?journals">Journals</a>
+                    <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
+                    <a href="https://eric.ed.gov/?download">Download</a>
+                    <a href="https://eric.ed.gov/submit">Submit</a>
+                    <a href="https://eric.ed.gov/?multimedia">Multimedia</a>
+                    <a href="https://eric.ed.gov/?widget">Widget</a>
+                </div>
+            </div>
+        </footer>        
+    </div>
+    <script>
+        feather.replace();
+
+        document.getElementById('sbutn').addEventListener('click', function(event) {
+            var query = document.getElementById('stab1').value;
+            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
+            window.location.href = 'search.html';
+            // window.location.href = searchURL;
+            // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
+        });
+
+    </script>
+</body>
+</html>
