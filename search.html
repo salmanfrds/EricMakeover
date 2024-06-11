@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!--Logo-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Search</title>
+</head>
+<body>
+    <div id="main">
+        <nav id="navbar">
+            <div class="navlogo">
+                <a href="index.html">
+                    <img src="eric_logo.png" alt="IES">
+                </a>
+            </div>
+            <div class="navbutton">
+                <a href="note.html">Notes</a>
+                <a href="https://eric.ed.gov/?faq">FAQ</a>
+                <a href="https://eric.ed.gov/?contact">Contact Us</a>
+            </div>    
+        </nav>
+        <hr>
+        <div id="searchContent">
+            <div class="filterbox">
+                <div id="publication_date" class="filtercontent">
+                    <div id="pub-filter" class="filter">
+                        <h3 style="font-weight: 500;">PUBLICATION DATE</h3>
+                        <button id="pub-button" class="expand-icon">
+                            <i data-feather="chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="pub-check">
+                        <label><input type="checkbox" name="publication_date" value="2024"> In 2024</label><br>
+                        <label><input type="checkbox" name="publication_date" value="2023"> Since 2023</label><br>
+                        <label><input type="checkbox" name="publication_date" value="2020"> Since 2020</label><br>
+                        <label><input type="checkbox" name="publication_date" value="2015"> Since 2015</label><br>
+                        <label><input type="checkbox" name="publication_date" value="2005"> Since 2005</label><br>
+                    </div>
+                </div>
+
+                <div id="descriptor" class="filtercontent">
+                    <div id="desc-filter" class="filter">
+                        <h3 style="font-weight: 500;">DESCRIPTOR</h3>
+                        <button id="desc-button" class="expand-icon">
+                            <i data-feather="chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="desc-check">
+                        <label><input type="checkbox" name="descriptor" value="web_sites"> Web Sites</label><br>
+                        <label><input type="checkbox" name="descriptor" value="foreign_countries"> Foreign Countries</label><br>
+                        <label><input type="checkbox" name="descriptor" value="internet"> Internet</label><br>
+                        <label><input type="checkbox" name="descriptor" value="teaching_methods"> Teaching Methods</label><br>
+                        <label><input type="checkbox" name="descriptor" value="educational_technology"> Educational Technology</label><br>
+                        <label><input type="checkbox" name="descriptor" value="higher_education"> Higher Education</label><br>
+                        <label><input type="checkbox" name="descriptor" value="college_students"> College Students</label><br>
+                        <label><input type="checkbox" name="descriptor" value="student_attitudes"> Student Attitudes</label><br>
+                        <label><input type="checkbox" name="descriptor" value="elementary_secondary_education"> Elementary Secondary Education</label><br>
+                        <label><input type="checkbox" name="descriptor" value="technology_uses_in_education"> Technology Uses in Education</label><br>
+                        <label><input type="checkbox" name="descriptor" value="computer_mediated"> Computer Mediated…</label><br>
+                    </div>
+                </div>
+
+                <div id="source" class="filtercontent">
+                    <div id="src-filter" class="filter">
+                        <h3 style="font-weight: 500;">SOURCE</h3>
+                        <button id="src-button" class="expand-icon">
+                            <i data-feather="chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="src-check">    
+                        <label><input type="checkbox" name="source" value="proquest_llc"> ProQuest LLC</label><br>
+                        <label><input type="checkbox" name="source" value="online_submission"> Online Submission</label><br>
+                        <label><input type="checkbox" name="source" value="social_education"> Social Education</label><br>
+                        <label><input type="checkbox" name="source" value="computers_in_libraries"> Computers in Libraries</label><br>
+                        <label><input type="checkbox" name="source" value="journal_of_extension"> Journal of Extension</label><br>
+                        <label><input type="checkbox" name="source" value="turkish_online_journal"> Turkish Online Journal of…</label><br>
+                        <label><input type="checkbox" name="source" value="physics_teacher"> Physics Teacher</label><br>
+                        <label><input type="checkbox" name="source" value="research_publishing_net"> Research-publishing.net</label><br>
+                        <label><input type="checkbox" name="source" value="computers_education"> Computers & Education</label><br>
+                        <label><input type="checkbox" name="source" value="school_library_media"> School Library Media…</label><br>
+                        <label><input type="checkbox" name="source" value="education_commission"> Education Commission of the…</label><br>
+                    </div>
+                </div>
+
+                <div id="author" class="filtercontent">
+                    <div id="athr-filter" class="filter">
+                        <h3 style="font-weight: 500;">AUTHOR</h3>
+                        <button id="athr-button" class="expand-icon">
+                            <i data-feather="chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="athr-check">    
+                        <label><input type="checkbox" name="author" value="Meyer, Katrina A."> Meyer, Katrina A.</label><br>
+                        <label><input type="checkbox" name="author" value="Jones, Stephanie J."> Jones, Stephanie J.</label><br>
+                        <label><input type="checkbox" name="author" value="Wilson, Jeffery L."> Wilson, Jeffery L.</label><br>
+                        <label><input type="checkbox" name="author" value="Jones, Stephanie"> Jones, Stephanie</label><br>
+                        <label><input type="checkbox" name="author" value="McNeal, Larry"> McNeal, Larry</label><br>
+                        <label><input type="checkbox" name="author" value="Xu, Yonghong Jade"> Xu, Yonghong Jade</label><br>
+                    </div>
+                </div>
+
+                <div id="publication_type" class="filtercontent">
+                    <div id="type-filter" class="filter">
+                        <h3 style="font-weight: 500;">PUBLICATION DATE</h3>
+                        <button id="type-button" class="expand-icon">
+                            <i data-feather="chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="type-check">
+                        <label><input type="checkbox" name="publication_type" value="Journal Articles"> Journal Articles</label><br>
+                        <label><input type="checkbox" name="publication_type" value="Reports - Research"> Reports - Research</label><br>
+                        <label><input type="checkbox" name="publication_type" value="Reports - Descriptive"> Reports - Descriptive</label><br>
+                    </div>
+                </div>
+
+                <div id="education_level" class="filtercontent">
+                    <div id="lvl-filter" class="filter">
+                        <h3 style="font-weight: 500;">EDUCATION LEVEL</h3>
+                        <button id="lvl-button" class="expand-icon">
+                            <i data-feather="chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="lvl-check">
+                        <label><input type="checkbox" name="education_level" value="Higher Education"> Higher Education</label><br>
+                        <label><input type="checkbox" name="education_level" value="Postsecondary Education"> Postsecondary Education</label><br>
+                        <label><input type="checkbox" name="education_level" value="Two Year Colleges"> Two Year Colleges</label><br>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="searchbar">
+                <input id="stab1" type="text" name="q" placeholder="Website" spellcheck="false">
+                <button id="sbutn" type="submit" class="search-icon">
+                    <i data-feather="search" style="color: rgb(60, 60, 60);"></i>
+                </button>                                                       
+                <button id="stab2" class="sTab">Collection</button>
+                <button id="stab3" class="sTab">Thesaurus</button>
+            </div>
+            <div class="content">
+                <script src="articles.json"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', populateContent);
+                    async function populateContent() {
+                        const response = await fetch('articles.json');
+                        const articles = await response.json();
+
+                        const contentDiv = document.querySelector('.content');
+                        articles.forEach(article => {
+                            const articleDiv = document.createElement('div');
+                            articleDiv.classList.add('article');
+                        
+                            const title = document.createElement('h2');
+                            title.textContent = article.title;
+                            articleDiv.appendChild(title);
+                        
+                            const authors = document.createElement('p');
+                            authors.classList.add('authors');
+                            authors.textContent = 'Authors: ' + article.authors.join(', ');
+                            articleDiv.appendChild(authors);
+                        
+                            const publication = document.createElement('p');
+                            publication.classList.add('publication');
+                            publication.textContent = `Publication: ${article.publication}, Volume: ${article.volume || ''}, Issue: ${article.issue}, Pages: ${article.pages}, Year: ${article.year}`;
+                            articleDiv.appendChild(publication);
+                        
+                            const abstract = document.createElement('p');
+                            abstract.textContent = article.abstract;
+                            articleDiv.appendChild(abstract);
+                        
+                            contentDiv.appendChild(articleDiv);
+                        });
+                    }
+                    // Call the function to populate content on DOMContentLoaded
+                    document.addEventListener('DOMContentLoaded', populateContent);
+                </script>
+            </div>
+            <div class="buttongroup">
+                <div class="buttonslist">
+                    <button>Download PDF
+                        <i data-feather="file-text" class="button-icon"></i>
+                    </button>
+                    <button>Direct Link
+                        <i data-feather="link" class="button-icon"></i>
+                    </button>
+                    <button>Peer Reviewed
+                        <i data-feather="check" class="button-icon"></i>
+                    </button>
+                </div>
+
+                <div class="buttonslist">
+                    <button>Download PDF
+                        <i data-feather="file-text" class="button-icon"></i>
+                    </button>
+                    <button>Direct Link
+                        <i data-feather="link" class="button-icon"></i>
+                    </button>
+                    <button>Peer Reviewed
+                        <i data-feather="check" class="button-icon"></i>
+                    </button>
+                </div>
+
+                <div class="buttonslist">
+                    <button>Download PDF
+                        <i data-feather="file-text" class="button-icon"></i>
+                    </button>
+                    <button>Direct Link
+                        <i data-feather="link" class="button-icon"></i>
+                    </button>
+                    <button>Peer Reviewed
+                        <i data-feather="check" class="button-icon"></i>
+                    </button>
+                </div>
+
+                <div class="buttonslist">
+                    <button>Download PDF
+                        <i data-feather="file-text" class="button-icon"></i>
+                    </button>
+                    <button>Direct Link
+                        <i data-feather="link" class="button-icon"></i>
+                    </button>
+                    <button>Peer Reviewed
+                        <i data-feather="check" class="button-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="Footer">
+            <div id="ftr">
+                <div id="socialIcons">
+                    <a href="https://www.facebook.com/SearchEduResources"><img width="30" height="30" src="icons8-twitterx.svg" alt="Twitter" /></a>
+                    <a href="https://x.com/ERICinfo"><img width="30" height="30" src="icons8-facebook.svg" alt="Facebook" /></a>
+                </div>
+                <div id="centerLinks">
+                    <a href="https://eric.ed.gov/?privacy">Privacy</a>
+                    <a href="https://eric.ed.gov/?copyright">Copyright</a>
+                    <a href="https://eric.ed.gov/?contact">Contact Us</a>
+                    <a href="https://eric.ed.gov/?selection">Selection Policy</a>
+                    <a href="https://eric.ed.gov/?api">API</a>
+                    <br>
+                    <a href="https://eric.ed.gov/?journals">Journals</a>
+                    <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
+                    <a href="https://eric.ed.gov/?download">Download</a>
+                    <a href="https://eric.ed.gov/submit">Submit</a>
+                    <a href="https://eric.ed.gov/?multimedia">Multimedia</a>
+                    <a href="https://eric.ed.gov/?widget">Widget</a>
+                </div>
+            </div>
+        </footer>
+    </div>        
+</div>
+    <hr>
+
+    <script>
+        $(document).ready(function() {
+            $('#pub-check').show();
+            $('#pub-filter').toggleClass('expanded');
+            $('#pub-button').click(function() {
+                $('#pub-check').toggle(200);
+                $('#pub-filter').toggleClass('expanded');
+            });
+        });
+
+        $(document).ready(function() {
+             $('#desc-check').hide();
+            $('#desc-button').click(function() {
+                $('#desc-check').toggle(200);
+                $('#desc-filter').toggleClass('expanded');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#src-check').show();
+            $('#src-filter').toggleClass('expanded');
+            $('#src-button').click(function() {
+                $('#src-check').toggle(200);
+                $('#src-filter').toggleClass('expanded');
+            });
+        });
+
+        $(document).ready(function() {
+             $('#athr-check').hide();
+            $('#athr-button').click(function() {
+                $('#athr-check').toggle(200);
+                $('#athr-filter').toggleClass('expanded');
+            });
+        });
+
+        $(document).ready(function() {
+             $('#type-check').hide();
+            $('#type-button').click(function() {
+                $('#type-check').toggle(200);
+                $('#type-filter').toggleClass('expanded');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#lvl-check').hide();
+            $('#lvl-button').click(function() {
+                $('#lvl-check').toggle(200);
+                $('#lvl-filter').toggleClass('expanded');
+            });
+        });
+
+        document.getElementById('sbutn').addEventListener('click', function(event) {
+            var query = document.getElementById('stab1').value;
+            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
+            window.location.href = 'search.html';
+            // window.location.href = searchURL;
+            // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
+        });
+    </script>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
