@@ -1,6 +1,7 @@
 * {
     font-family: 'lora', serif;
     font-weight: 400;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -125,12 +126,6 @@ body{
     font-weight: 600;
 }
 
-
-.highlighted {
-    background-color: #67BFFF !important;
-    font-weight: 600 !important;
-}
-
 #sbar #tab1:hover{
     background-color: #95CB77;
     font-weight: 600;
@@ -156,6 +151,7 @@ body{
     text-align: center;
     padding: 1.25rem;
     position: relative; /* Set position relative */
+    margin-top: auto;
 }
 
 #Footer a {
@@ -189,4 +185,216 @@ body{
 #centerLinks a:hover {
     color: #48361c;
     font-weight: 600;
+}
+
+#searchContent {
+    display: grid;
+    grid-template-areas: 
+        "filterbox searchbar searchbar searchbar"
+        "filterbox content content buttonslist"
+        "filterbox content content buttonslist"
+        "filterbox content content buttonslist";
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 10px;
+}
+
+.filterbox {
+    grid-area: filterbox;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 180px;
+    min-width: 180px;
+}
+
+.filterbox h3{
+    font-size: 0.8rem;
+}
+
+.filterbox label{
+    font-size: 0.8rem;
+}
+
+.filtercontent{
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.filtercontent input{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expand-icon{
+    border: none;
+    height: 40px;
+    width: 40px;
+}
+
+.expand-icon :hover{
+    background-color: #dedede;
+    transition: background-color 1s ease;
+}
+
+.expanded {
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+
+.searchbar {
+    grid-area: searchbar;
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.searchbar .sTab{
+    padding: 10px;
+    border-radius: 40px;
+    border: 2px solid rgb(60, 60, 60);
+    height: 40px;
+}
+
+.searchbar #stab2{
+    background-color: #95CB77;
+}
+
+.searchbar #stab2:hover{
+    background-color: #95CB77;
+    font-weight: 600;
+    transition: background-color 1s ease;
+}
+
+.searchbar #stab3:hover{
+    background-color:#67BFFF;
+    font-weight: 600;
+    transition: background-color 1s ease;
+}
+
+.searchbar .search-icon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(60, 60, 60);
+    border-radius: 50%;
+    background-color: rgb(207, 207, 207);
+}
+
+.searchbar .search-icon:hover{
+    background-color:#95CB77;
+    font-weight: 600;
+    transition: background-color 1s ease;
+}
+
+.searchbar input{
+    padding: 10px;
+    border-radius: 40px;
+    border: 2px solid rgb(60, 60, 60);
+    width: 600px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.article {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.article h2 {
+    font-size: 1.5em;
+    color: #5271FF
+}
+
+.article p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.article .authors {
+    font-style: italic;
+    color: #42573F;
+    font-weight: 500;
+}
+
+.article .publication {
+    font-weight: bold;
+}
+
+.buttongroup{
+    grid-area: buttonslist;
+    display: flex;
+    flex-direction:column;
+    gap: 13rem;
+    margin-top: 6rem;
+}
+
+.buttonslist {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 0.5rem;
+}
+
+.buttonslist button{
+    width: 150px;
+    text-align: left;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonslist button:hover{
+    background-color: #eeeeee;
+    transition: background-color 1s ease;
+    font-weight: 600;
+    color: #48361c;
+}
+
+.button-icon{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+#all{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#texts{
+    padding: 20px 40px;
+}
+
+#texts h1{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#texts h2{
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#texts p{
+    margin-bottom: 20px;
+}
+
+#texts li{
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+#texts ul{
+    margin-bottom: 20px;
 }
