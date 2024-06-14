@@ -79,7 +79,63 @@ body{
     padding: 10px;
     border-radius: 40px;
     border: 2px solid rgb(60, 60, 60);
-    width: 600px; /* Change width to 100% */
+    width: 600px;
+}
+
+@media (max-width: 768px) {
+
+    #sbar input[type="text"] {
+        width: 350px; /* Reduce width by half */
+    }
+
+    #logo img{
+        width: 70%;
+        height: 70%;
+    }
+    
+    #Footer a {
+        color: rgb(60, 60, 60);
+        text-decoration: none;
+        margin: 0 5px; /* Adjust margin for spacing between links */
+    }
+    
+    #ftr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    #centerLinks {
+       flex-grow: 1; 
+        text-align: center;
+        position: relative;
+        padding-top: 50px;
+    }
+    
+    #centerLinks a {
+        padding-top: 10px;
+    }
+
+    #socialIcons img{
+        height: 25px;
+        width: 25px; 
+    }
+}
+
+@media (max-width: 450px) {
+    #sbar input[type="text"] {
+        width: 220px; /* Reduce width by half */
+    }
+
+    #logo img{
+        min-width: 60%;
+        min-height: 60%;
+    }
+
+    .navbutton a{
+        font-size: 0.8rem;
+    }
 }
 
 #sbar input[type="submit"] {
@@ -161,7 +217,7 @@ body{
 }
 
 #ftr {
-    position: relative; /* Set position relative */
+    position: relative;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -170,7 +226,7 @@ body{
 #centerLinks {
     flex-grow: 1;
     text-align: center;
-    position: relative; /* Set position relative */
+    position: relative;
 }
 
 #centerLinks a {
@@ -268,6 +324,7 @@ body{
     background-color: #95CB77;
 }
 
+
 .searchbar #stab2:hover{
     background-color: #95CB77;
     font-weight: 600;
@@ -298,7 +355,43 @@ body{
     padding: 10px;
     border-radius: 40px;
     border: 2px solid rgb(60, 60, 60);
-    width: 600px;
+    width: 500px;
+}
+
+@media (max-width: 768px) {
+    .searchbar input{
+        width: 250px;
+        font-size: 0.8rem;
+    }
+
+    .searchbar .sTab{
+        font-size: 0.8rem;
+        max-width: 80px;
+    }
+
+    .searchbar {
+        display: flex;
+        gap: 5px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchbar input{
+        width: 150px;
+        font-size: 0.8rem;
+    }
+
+    .searchbar .sTab{
+        font-size: 0.6rem;
+        max-width: 60px;
+    }
+
+    .searchbar {
+        display: flex;
+        gap: 5px;
+        padding-left: 10px;
+    }
 }
 
 .content {
@@ -318,17 +411,33 @@ body{
 .article p {
     margin: 10px 0;
     color: #555;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .article .authors {
     font-style: italic;
     color: #42573F;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .article .publication {
     font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .buttongroup{
     grid-area: buttonslist;
