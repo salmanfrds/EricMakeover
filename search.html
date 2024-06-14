@@ -318,14 +318,6 @@
             });
         });
 
-        document.getElementById('sbutn').addEventListener('click', function(event) {
-            var query = document.getElementById('stab1').value;
-            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
-            window.location.href = 'search.html';
-            // window.location.href = searchURL;
-            // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
-        });
-
         $(document).ready(function() {
             function hideButtonsOnResize() {
                 if ($(window).width() < 800) {
@@ -360,6 +352,14 @@
             $(window).resize(function() {
                 hideFilterBoxOnResize();
             });
+        });
+g
+        document.getElementById('sbutn').addEventListener('click', function(event) {
+            var query = document.getElementById('stab1').value;
+            var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
+            window.location.href = 'search.html';
+            // window.location.href = searchURL;
+            // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
         });
     </script>
 
