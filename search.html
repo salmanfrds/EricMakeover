@@ -325,6 +325,42 @@
             // window.location.href = searchURL;
             // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
         });
+
+        $(document).ready(function() {
+            function hideButtonsOnResize() {
+                if ($(window).width() < 800) {
+                    $('.buttongroup').hide();
+                } else {
+                    $('.buttongroup').show();
+                }
+            }
+
+            // Run on page load
+            hideButtonsOnResize();
+
+            // Run on window resize
+            $(window).resize(function() {
+                hideButtonsOnResize();
+            });
+        });
+
+        $(document).ready(function() {
+            function hideFilterBoxOnResize() {
+                if ($(window).width() < 500) {
+                    $('.filterbox').hide();
+                } else {
+                    $('.filterbox').show();
+                }
+            }
+
+            // Run on page load
+            hideFilterBoxOnResize();
+
+            // Run on window resize
+            $(window).resize(function() {
+                hideFilterBoxOnResize();
+            });
+        });
     </script>
 
     <script>
