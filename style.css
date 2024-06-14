@@ -134,7 +134,11 @@ body{
     }
 
     .navbutton a{
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    #buttons{
+        justify-content: center;
     }
 }
 
@@ -362,17 +366,25 @@ body{
     .searchbar input{
         width: 250px;
         font-size: 0.8rem;
+        height: 0.7rem;
     }
 
     .searchbar .sTab{
         font-size: 0.8rem;
         max-width: 80px;
+        height: 2.4rem;
     }
 
     .searchbar {
         display: flex;
         gap: 5px;
-        padding-left: 10px;
+        padding-left: none;
+        height: 2.5rem;
+    }
+
+    .searchbar .search-icon{
+        width: 34px;
+        height: 34px;
     }
 }
 
@@ -390,7 +402,7 @@ body{
     .searchbar {
         display: flex;
         gap: 5px;
-        padding-left: 10px;
+        padding-left: none;
     }
 }
 
@@ -443,15 +455,21 @@ body{
     grid-area: buttonslist;
     display: flex;
     flex-direction:column;
-    gap: 13rem;
-    margin-top: 6rem;
+    gap: 100px;
+    margin-top: 7vw;
 }
 
 .buttonslist {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    margin-top: 15px;
     gap: 0.5rem;
+}
+
+@media (max-width: 940px){
+    .buttongroup{
+        gap: 130px;
+    }
 }
 
 .buttonslist button{
