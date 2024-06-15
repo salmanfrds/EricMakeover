@@ -1,0 +1,154 @@
+* {
+    font-family: 'lora', serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+#container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar {
+    margin: 0.9rem 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.navbutton a {
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 1rem 1rem;
+}
+
+.navbutton a:hover {
+    background-color: rgb(228, 228, 228);
+    color: #48361c;
+    font-weight: 600;
+    transition: background-color 0.5s ease;
+}
+
+#navbar img {
+    height: 2.5rem;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+}
+
+.centered {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.highlight {
+    font-weight: bold;
+   
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pdf-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #95CB77;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.pdf-button:hover {
+    background-color: #83B366;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.click-here-button {
+    color: blue;
+    text-decoration: underline;
+}
+
+.view-as-pdf {
+    color: blue;
+    text-decoration: underline;
+}
+
+#Footer {
+    background-color: rgb(217, 217, 217);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+#Footer a {
+    color: rgb(60, 60, 60);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+#ftr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: self-start;
+    align-items: self-start;
+}
+
+#centerLinks {
+    text-align: center;
+    flex-basis: 100%;
+}
+
+#centerLinks a {
+    padding: 5px;
+}
+
+#socialIcons {
+    margin: 1%;
+}
+
+#centerLinks a:hover {
+    color: #48361c;
+    font-weight: 600;
+}
