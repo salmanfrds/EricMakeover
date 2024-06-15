@@ -18,7 +18,9 @@
 
 </head>
 <body id="bodyMain">
+    <!-- consist of navigation, container for logo and search button, and footer -->
     <div id="main" class="index">
+        <!-- navigation bar -->
         <nav id="navbar">
             <div class="navlogo">
                 <a href="https://ies.ed.gov/">
@@ -27,11 +29,12 @@
             </div>
             <div class="navbutton">
                 <a href="note.html">Notes</a>
-                <a href="https://eric.ed.gov/?faq">FAQ</a>
+                <a href="faq.html">FAQ</a>
                 <a href="https://eric.ed.gov/?contact">Contact Us</a>
             </div>    
         </nav>
         <hr>
+        <!-- Logo, Search, and Buttons here -->
         <div id="container">     
             <div id="logo">
                 <a href="index.html" id="Home" title="ERIC Home">
@@ -53,6 +56,7 @@
                 </form>
             </div>
         </div>
+        <!-- Footer -->
         <footer id="Footer">
             <div id="ftr">
                 <div id="socialIcons">
@@ -62,11 +66,11 @@
                 <div id="centerLinks">
                     <a href="https://eric.ed.gov/?privacy">Privacy</a>
                     <a href="https://eric.ed.gov/?copyright">Copyright</a>
-                    <a href="https://eric.ed.gov/?contact">Contact Us</a>
+                    <a href="contactUs.html">Contact Us</a>
                     <a href="https://eric.ed.gov/?selection">Selection Policy</a>
                     <a href="https://eric.ed.gov/?api">API</a>
                     <br>
-                    <a href="https://eric.ed.gov/?journals">Journals</a>
+                    <a href="journal.html">Journals</a>
                     <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
                     <a href="https://eric.ed.gov/?download">Download</a>
                     <a href="https://eric.ed.gov/submit">Submit</a>
@@ -74,7 +78,7 @@
                     <a href="https://eric.ed.gov/?widget">Widget</a>
                 </div>
             </div>
-        </footer>        
+        </footer>      
     </div>
     <script>
         feather.replace();
@@ -88,11 +92,12 @@
             // the scirpt suppose to  be like this, but since i designed the searchpage myself so i link it to my own made page 
         });
 
+        // DOM manipulation for change button color after click 
         document.addEventListener("DOMContentLoaded", function() {
             var tab2Button = document.getElementById("tab2");
             var tab1Button = document.getElementById("tab1")
             tab2Button.addEventListener("click", function(event) {
- 
+                
                 event.preventDefault();
                 event.stopPropagation();
 
