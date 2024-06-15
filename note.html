@@ -15,10 +15,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-<body id="bodyMain">
-    <div id="all" class="index">
+<body>
+    <!-- consist of nav, search bar, content, and footer -->
+    <div id="main" class="index">
         <nav id="navbar">
             <div class="navlogo">
                 <a href="index.html">
@@ -26,8 +26,8 @@
                 </a>
             </div>
             <div class="navbutton">
-                <a href="https://eric.ed.gov/?note">Notes</a>
-                <a href="https://eric.ed.gov/?faq">FAQ</a>
+                <a href="note.html">Notes</a>
+                <a href="faq.html">FAQ</a>
                 <a href="https://eric.ed.gov/?contact">Contact Us</a>
             </div>    
         </nav>
@@ -61,11 +61,11 @@
                 <div id="centerLinks">
                     <a href="https://eric.ed.gov/?privacy">Privacy</a>
                     <a href="https://eric.ed.gov/?copyright">Copyright</a>
-                    <a href="https://eric.ed.gov/?contact">Contact Us</a>
+                    <a href="contactUs.html">Contact Us</a>
                     <a href="https://eric.ed.gov/?selection">Selection Policy</a>
                     <a href="https://eric.ed.gov/?api">API</a>
                     <br>
-                    <a href="https://eric.ed.gov/?journals">Journals</a>
+                    <a href="journal.html">Journals</a>
                     <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
                     <a href="https://eric.ed.gov/?download">Download</a>
                     <a href="https://eric.ed.gov/submit">Submit</a>
@@ -73,11 +73,12 @@
                     <a href="https://eric.ed.gov/?widget">Widget</a>
                 </div>
             </div>
-        </footer>        
+        </footer>     
     </div>
     <script>
         feather.replace();
 
+        // click even on search button
         document.getElementById('sbutn').addEventListener('click', function(event) {
             var query = document.getElementById('stab1').value;
             var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
