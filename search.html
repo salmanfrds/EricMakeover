@@ -21,8 +21,10 @@
     <title>Search</title>
 </head>
 <body>
+    <!-- consist of 3 main part, the navigation, content, and footer -->
     <div id="main">
         <nav id="navbar">
+            <!-- navigation bar -->
             <div class="navlogo">
                 <a href="index.html">
                     <img src="eric_logo.png" alt="IES">
@@ -30,12 +32,14 @@
             </div>
             <div class="navbutton">
                 <a href="note.html">Notes</a>
-                <a href="https://eric.ed.gov/?faq">FAQ</a>
+                <a href="faq.html">FAQ</a>
                 <a href="https://eric.ed.gov/?contact">Contact Us</a>
             </div>    
         </nav>
         <hr>
+        <!-- The Main Content -->
         <div id="searchContent">
+            <!-- filter boxes -->
             <div class="filterbox">
                 <div id="publication_date" class="filtercontent">
                     <div id="pub-filter" class="filter">
@@ -52,7 +56,6 @@
                         <label><input type="checkbox" name="publication_date" value="2005"> Since 2005</label><br>
                     </div>
                 </div>
-
                 <div id="descriptor" class="filtercontent">
                     <div id="desc-filter" class="filter">
                         <h3 style="font-weight: 500;">DESCRIPTOR</h3>
@@ -74,7 +77,6 @@
                         <label><input type="checkbox" name="descriptor" value="computer_mediated"> Computer Mediated…</label><br>
                     </div>
                 </div>
-
                 <div id="source" class="filtercontent">
                     <div id="src-filter" class="filter">
                         <h3 style="font-weight: 500;">SOURCE</h3>
@@ -96,7 +98,6 @@
                         <label><input type="checkbox" name="source" value="education_commission"> Education Commission of the…</label><br>
                     </div>
                 </div>
-
                 <div id="author" class="filtercontent">
                     <div id="athr-filter" class="filter">
                         <h3 style="font-weight: 500;">AUTHOR</h3>
@@ -152,6 +153,7 @@
                 <button id="stab2" class="sTab">Collection</button>
                 <button id="stab3" class="sTab">Thesaurus</button>
             </div>
+            <!-- The Main Content, the text stored in a json file, and retrieved using javascript -->
             <div class="content">
                 <script src="articles.json"></script>
                 <script>
@@ -190,6 +192,7 @@
                     document.addEventListener('DOMContentLoaded', populateContent);
                 </script>
             </div>
+            <!-- The buttons for open the pdf, peer reviewd, and direct, its not functioning -->
             <div class="buttongroup">
                 <div class="buttonslist">
                     <button>Download PDF
@@ -240,7 +243,7 @@
                 </div>
             </div>
         </div>
-        
+        <!-- footer -->
         <footer id="Footer">
             <div id="ftr">
                 <div id="socialIcons">
@@ -250,11 +253,11 @@
                 <div id="centerLinks">
                     <a href="https://eric.ed.gov/?privacy">Privacy</a>
                     <a href="https://eric.ed.gov/?copyright">Copyright</a>
-                    <a href="https://eric.ed.gov/?contact">Contact Us</a>
+                    <a href="contactUs.html">Contact Us</a>
                     <a href="https://eric.ed.gov/?selection">Selection Policy</a>
                     <a href="https://eric.ed.gov/?api">API</a>
                     <br>
-                    <a href="https://eric.ed.gov/?journals">Journals</a>
+                    <a href="journal.html">Journals</a>
                     <a href="https://eric.ed.gov/?nonjournals">Non-Journals</a>
                     <a href="https://eric.ed.gov/?download">Download</a>
                     <a href="https://eric.ed.gov/submit">Submit</a>
@@ -266,8 +269,8 @@
     </div>        
 </div>
     <hr>
-
     <script>
+        //Expand and Collapse the filter box
         $(document).ready(function() {
             $('#pub-check').show();
             $('#pub-filter').toggleClass('expanded');
@@ -318,6 +321,7 @@
             });
         });
 
+        // To hide some element when the screen width is small
         $(document).ready(function() {
             function hideButtonsOnResize() {
                 if ($(window).width() < 800) {
@@ -353,7 +357,8 @@
                 hideFilterBoxOnResize();
             });
         });
-g
+
+        // even listener for click event in the search button
         document.getElementById('sbutn').addEventListener('click', function(event) {
             var query = document.getElementById('stab1').value;
             var searchURL = 'https://eric.ed.gov/?q=' + encodeURIComponent(query);
@@ -364,6 +369,7 @@ g
     </script>
 
     <script>
+        // to get an icon onlinely
         feather.replace();
     </script>
 </body>
